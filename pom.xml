@@ -10,7 +10,7 @@
 
 	<groupId>org.openmrs.module</groupId>
 	<artifactId>supply</artifactId>
-	<version>3.0</version>
+	<version>1.0.0</version>
 	<packaging>pom</packaging>
 	<name>Supply</name>
 	<description>no description</description>
