@@ -1456,24 +1456,6 @@ s
         <!--        &lt;!&ndash; /Report &ndash;&gt;-->
     </changeSet>
 
-    <changeSet id="supply-remove-duplicate-answer-concept-165041" author="BOGUI SERGE">
-        <preConditions onFail="MARK_RAN">
-            <sqlCheck expectedResult="2">SELECT COUNT(*)
-                                         FROM concept_answer
-                                         WHERE concept_id = 162240
-                                           AND answer_concept = 165041 </sqlCheck>
-        </preConditions>
-        <sql>
-            DELETE
-            FROM concept_answer
-            WHERE concept_answer_id =
-                  (SELECT MAX(concept_answer_id)
-                   FROM concept_answer
-                   WHERE concept_id = 162240
-                     AND answer_concept = 165041
-                   GROUP BY 165041)
-        </sql>
-    </changeSet>
 
     <changeSet id="supply-regime-concept-insert" author="BOGUI SERGE" runAlways="true">
         <sql>
@@ -1695,7 +1677,8 @@ s
         </sql>
     </changeSet>
 
-    <changeSet id="supply-add-TDF-3TC-concept-to-regimen-list" author="BOGUI SERGE">
+    <changeSet id="supply-add-TDF-3TC-concept-to-regimen-list" author="BOGUI SERGE" >
+        <validCheckSum>3:fb369a7465148cf8193bf1297284c477</validCheckSum>
         <preConditions onFail="MARK_RAN">
             <sqlCheck expectedResult="0">
                 SELECT COUNT(*)
@@ -1771,6 +1754,7 @@ s
     </changeSet>
 
     <changeSet id="supply-add-goal-mysql" author="BOGUI SERGE" dbms="mariadb, mysql">
+        <validCheckSum>3:4829a59af019f5457fca7f5c28600220</validCheckSum>
         <preConditions onFail="MARK_RAN">
             <sqlCheck expectedResult="0">
                 SELECT COUNT(concept_id)
