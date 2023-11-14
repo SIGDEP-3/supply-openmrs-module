@@ -18,9 +18,9 @@
 	<url>https://wiki.openmrs.org/x/FQ4z</url>
 
 	<scm>
-		<connection>scm:git:git@github.com:openmrs/openmrs-module-supply.git</connection>
-		<developerConnection>scm:git:git@github.com:openmrs/openmrs-module-supply.git</developerConnection>
-		<url>https://github.com/openmrs/openmrs-module-supply/</url>
+		<connection>scm:git:https://github.com/SIGDEP-3/openmrs-module-supply.git</connection>
+		<developerConnection>scm:git:https://github.com/SIGDEP-3/openmrs-module-supply.git</developerConnection>
+		<url>https://github.com/SIGDEP-3/openmrs-module-supply/</url>
 	</scm>
 
 	<modules>
@@ -63,15 +63,10 @@
 			<!-- Begin OpenMRS modules -->
 
 			<dependency>
-
 				<groupId>org.openmrs.module</groupId>
-
 				<artifactId>webservices.rest-omod</artifactId>
-
 				<version>2.26.0</version>
-
 				<scope>provided</scope>
-
 			</dependency>
 
 			<dependency>
@@ -154,6 +149,17 @@
 			</plugins>
 		</pluginManagement>
 	</build>
-<!--	Add myself -->
 
+	<distributionManagement>
+		<repository>
+          <id>uwdigi-repo-central</id>
+          <name>libs-release</name>
+          <url>https://packages.uwdigi.org/artifactory/libs-release</url>
+        </repository>
+		<snapshotRepository>
+          <id>uwdigi-repo-snapshots</id>
+          <name>libs-snapshot</name>
+          <url>https://packages.uwdigi.org/artifactory/libs-snapshot</url>
+        </snapshotRepository>
+	</distributionManagement>
 </project>
