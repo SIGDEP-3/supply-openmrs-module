@@ -18,9 +18,9 @@
 	<url>https://wiki.openmrs.org/x/FQ4z</url>
 
 	<scm>
-		<connection>scm:git:https://github.com/SIGDEP-3/openmrs-module-supply.git</connection>
-		<developerConnection>scm:git:https://github.com/SIGDEP-3/openmrs-module-supply.git</developerConnection>
-		<url>https://github.com/SIGDEP-3/openmrs-module-supply/</url>
+		<connection>scm:git:https://github.com/SIGDEP-3/supply-openmrs-module.git</connection>
+		<developerConnection>scm:git:https://github.com/SIGDEP-3/supply-openmrs-module.git</developerConnection>
+		<url>https://github.com/SIGDEP-3/supply-openmrs-module/</url>
 	</scm>
 
 	<modules>
