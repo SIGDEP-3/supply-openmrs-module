@@ -1,5 +1,6 @@
 .idea
 .vscode
+.gitpod.yml
 
 *.iml
 /api/target
